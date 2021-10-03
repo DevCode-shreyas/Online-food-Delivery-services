@@ -1,11 +1,11 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
     scroll-behavior: smooth;
-
 }
 
 :root {
@@ -23,7 +23,7 @@ html {
 
 #navbar::before {
     content: "";
-    background-color: rgb(41, 38, 38);
+    background-color: rgba(0, 0, 0, .75);
     position: absolute;
     top: 0px;
     left: 0px;
@@ -40,6 +40,7 @@ html {
 #logo img {
     height: 100px;
     margin: 3px 6px;
+    border-radius: 100%;
 }
 
 #navbar ul {
@@ -79,7 +80,7 @@ html {
 
 #home::before {
     content: "";
-    background: url("../bg1.jpg") no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url("../bg1.jpg") no-repeat center center/cover;
     position: absolute;
     top: 0px;
     left: 0px;
@@ -121,16 +122,17 @@ html {
 .btn {
     padding: 6px 20px;
     border: 2px solid white;
-    background-color: brown;
+    background-color: rgba(165, 42, 42, 1);
     color: white;
     margin: 37px;
     font-size: 1.5rem;
     border-radius: 10px;
     cursor: pointer;
+    transition: all .2s ease-in-out;
 }
 
 .btn:hover{
-    cursor: pointer;
+    background-color: rgba(165, 42, 42, .8);
 }
 .center {
     padding-top: 15px;
@@ -140,8 +142,6 @@ html {
 }
 
 /* services section */
-
-
 
 #services-container{
     background-color:whitesmoke;
@@ -158,6 +158,10 @@ html {
     background: #f2f2f2;
     justify-content: space-evenly;
     box-shadow: 0 0 25px 10px rgba(0,0,0,0.75);
+    transition: all .3s ease-in-out;
+}
+#services .box:hover {
+    transform: scale(1.05);
 }
 
 #services .box img {
@@ -180,23 +184,23 @@ html {
 #client-section {
     position: relative;
     z-index: -1;
+    color: #FFF;
 }
 
 #client-section::before {
     content: "";
     position: absolute;
     /* background: url("../bg.jpg"); */
-    background: url("../ob.jpg") no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url("../ob.jpg") no-repeat center center/cover;
     width: 100%;
     height: 100px;
     z-index: -1;
-    opacity: 0.3;
 }
 
 #clients {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center;;
 }
 
 .client-item {
@@ -218,17 +222,23 @@ html {
     content: "";
     position: absolute;
     width: 100%;
-    height: 100%;
+    height: 80%;
     z-index: -1;
-    opacity: 0.7;
-    background: url(../contact.jpg) no-repeat center center/cover;
+    background: linear-gradient(rgba(0,0,0,0.75), rgba(0,0,0,0.75)), url(../contact.jpg) no-repeat center center/cover;
+}
+
+#contact{
+    color: #FFF;
 }
 
 footer {
-    background: black;
+    background: rgb(12, 12, 12);
     color: white;
-    padding: 30px 20px;
-    bottom: 0px;
+    width: 100%;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 #contact-box {
@@ -266,11 +276,14 @@ footer {
 }
 
 .btn2{
-    padding: 10px 10px;
-    border: 2px solid black;
-    background-color: black;
-    color: white;
+    padding: 8px 20px;
+    background-color: rgba(241, 241, 241, 1);
+    color: #000;
     font-size: 1.5rem;
-    border-radius: 10px;
+    border-radius: 5px;
     cursor: pointer;
+    transition: all .2s ease-in-out;
+}
+.btn2:hover{
+    background-color: rgba(241, 241, 241, .9);
 }
